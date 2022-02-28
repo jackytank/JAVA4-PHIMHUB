@@ -18,6 +18,7 @@ public class Share implements Serializable {
 
 	@Id
 	@Column(name="ShareId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int shareId;
 
 	@Column(name="Emails")

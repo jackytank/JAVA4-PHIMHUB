@@ -5,33 +5,33 @@ import java.util.Date;
 
 import javax.persistence.*;
 
-
 /**
  * The persistent class for the Favorites database table.
  * 
  */
 @Entity
-@Table(name="Favorites")
-@NamedQuery(name="Favorite.findAll", query="SELECT f FROM Favorite f")
+@Table(name = "Favorites")
+@NamedQuery(name = "Favorite.findAll", query = "SELECT f FROM Favorite f")
 public class Favorite implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="FavoriteId")
+	@Column(name = "FavoriteId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int favoriteId;
 
-	@Column(name="LikeDate")
+	@Column(name = "LikeDate")
 	private Date likeDate;
 
-	//bi-directional many-to-one association to User
+	// bi-directional many-to-one association to User
 	@ManyToOne
-	@JoinColumn(name="UserId")
+	@JoinColumn(name = "UserId")
 	private User user;
 
-	//bi-directional many-to-one association to Video
+	// bi-directional many-to-one association to Video
 	@ManyToOne
-	@JoinColumn(name="VideoId")
-	private Video video; 
+	@JoinColumn(name = "VideoId")
+	private Video video;
 
 	public Favorite() {
 	}

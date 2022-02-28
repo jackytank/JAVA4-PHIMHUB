@@ -19,7 +19,7 @@ public class Video implements Serializable {
 	private String videoId;
 
 	@Column(name = "Active")
-	private boolean active;
+	private boolean active = true;
 
 	@Column(name = "Description")
 	private String description;

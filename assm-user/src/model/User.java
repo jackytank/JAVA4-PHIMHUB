@@ -18,9 +18,6 @@ public class User implements Serializable {
 	@Column(name = "UserId")
 	private String userId;
 
-	@Column(name = "Admin")
-	private boolean admin;
-
 	@Column(name = "Email")
 	private String email;
 
@@ -30,6 +27,9 @@ public class User implements Serializable {
 	@Column(name = "Password")
 	private String password;
 
+	@Column(name = "Admin")
+	private boolean admin = false;
+	
 	// bi-directional many-to-one association to Favorite
 	@OneToMany(mappedBy = "user")
 	private List<Favorite> favorites;
