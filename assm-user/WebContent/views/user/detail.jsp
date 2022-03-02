@@ -6,14 +6,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<script src="https://kit.fontawesome.com/e136359f35.js"
-	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/e136359f35.js" crossorigin="anonymous"></script>
 <title>${empty video.title ? 'Detail':video.title}</title>
-<link rel="icon"
-	href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1"
-	type="image/x-icon">
+<link rel="icon" href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1" type="image/x-icon">
 </head>
 
 <body>
@@ -29,9 +25,7 @@
 						<form action="" method="post">
 							<div class="field">
 								<figure>
-									<iframe style="width: 100%;" height="550"
-										src="${video.videoId}" title="YouTube video player"
-										frameborder="0"
+									<iframe style="width: 100%;" height="550" src="${video.videoId}" title="YouTube video player" frameborder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowfullscreen></iframe>
 								</figure>
@@ -49,12 +43,10 @@
 									<div class="column">
 										<div class="field is-grouped is-grouped-right">
 											<div class="buttons is-fullwidth">
-												<a href="LikeVideo?videoId=${item.videoId}"
-													class="button is-info"> <span class="icon"> <i
+												<a href="LikeVideo?videoId=${item.videoId}" class="button is-info"> <span class="icon"> <i
 														class="far fa-thumbs-up"></i>
 												</span> <span>LIKE</span>
-												</a> <a href="ShareVideo?videoId=${video.videoId}"
-													class="button"> <span class="icon"> <i
+												</a> <a href="ShareVideo?videoId=${video.videoId}" class="button"> <span class="icon"> <i
 														class="fas fa-share-alt"></i>
 												</span> <span>SHARE</span>
 												</a>
@@ -82,12 +74,11 @@
 								</a>
 							</div>
 							<div class="buttons is-fullwidth">
-								<a href="LikeVideo?videoId=${item.videoId}"
-									class="button is-info"> <span class="icon"> <i
+								<a href="LikeVideo?videoId=${item.videoId}" class="button is-info"> <span class="icon"> <i
 										class="far fa-thumbs-up"></i>
 								</span> <span>LIKE</span>
-								</a> <a href="ShareVideo?videoId=${item.videoId}" class="button">
-									<span class="icon"> <i class="fas fa-share-alt"></i>
+								</a> <a href="ShareVideo?videoId=${item.videoId}" class="button"> <span class="icon"> <i
+										class="fas fa-share-alt"></i>
 								</span> <span>SHARE</span>
 								</a>
 							</div>

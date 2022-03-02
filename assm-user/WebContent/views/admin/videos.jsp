@@ -6,16 +6,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<script src="https://kit.fontawesome.com/e136359f35.js"
-	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/e136359f35.js" crossorigin="anonymous"></script>
 <title>Video Management</title>
-<link rel="icon"
-	href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1"
-	type="image/x-icon">
-<script
-	src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
+<link rel="icon" href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1" type="image/x-icon">
+<script src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
 </head>
 
 <body>
@@ -31,12 +26,10 @@
 					<!-- tab header -->
 					<div class="tabs is-boxed">
 						<ul>
-							<li class="is-active" data-target="video-edition"><a> <span
-									class="icon is-small"><i class="fas fa-photo-video"></i></span>
-									<span>VIDEO EDITION</span>
+							<li class="is-active" data-target="video-edition"><a> <span class="icon is-small"><i
+										class="fas fa-photo-video"></i></span> <span>VIDEO EDITION</span>
 							</a></li>
-							<li data-target="video-list"><a> <span
-									class="icon is-small"><i class="fas fa-list"></i></span> <span>VIDEO
+							<li data-target="video-list"><a> <span class="icon is-small"><i class="fas fa-list"></i></span> <span>VIDEO
 										LIST</span>
 							</a></li>
 						</ul>
@@ -48,8 +41,7 @@
 						<div id="video-edition">
 							<form action="${url}/index" method="post">
 								<div class="columns">
-									<div
-										class="column mt-5 is-5 is-flex is-align-items-center is-flex-direction-column">
+									<div class="column mt-5 is-5 is-flex is-align-items-center is-flex-direction-column">
 										<figure class="image">
 											<img
 												src="${empty form.poster ? 'https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-p%C3%A1gina-no-encontrada-error-con-efecto-de-falla-en-la-pantalla-ilustraci%C3%B3n-vectorial-para-s.jpg':form.poster}"
@@ -60,30 +52,25 @@
 										<div class="field">
 											<label class="label">Video ID</label>
 											<div class="control">
-												<input class="input" type="text" value="${form.videoId}"
-													name="videoId">
+												<input class="input" type="text" value="${form.videoId}" name="videoId">
 											</div>
 										</div>
 										<div class="field">
 											<label class="label">Video Title</label>
 											<div class="control">
-												<input class="input" type="text" value="${form.title}"
-													name="title">
+												<input class="input" type="text" value="${form.title}" name="title">
 											</div>
 										</div>
 										<div class="field">
 											<label class="label">View Count</label>
 											<div class="control">
-												<input class="input" type="number" value="${form.views}"
-													name="views">
+												<input class="input" type="number" value="${form.views}" name="views">
 											</div>
 										</div>
 										<div class="field">
 											<div class="control">
-												<label class="radio"> <input type="radio"
-													name="active" ${form.active?"checked":""}> Active
-												</label> <label class="radio"> <input type="radio"
-													name="active" ${!form.active?"checked":""}>
+												<label class="radio"> <input type="radio" name="active" ${form.active?"checked":""}> Active
+												</label> <label class="radio"> <input type="radio" name="active" ${!form.active?"checked":""}>
 													In-active
 												</label>
 											</div>
@@ -146,8 +133,7 @@
 								<div class="field is-grouped is-grouped-centered">
 									<div class="control">
 										<button class="button" type="button">
-											<span class="icon"> <i
-												class="fas fa-angle-double-left"></i>
+											<span class="icon"> <i class="fas fa-angle-double-left"></i>
 											</span>
 										</button>
 									</div>
@@ -165,8 +151,7 @@
 									</div>
 									<div class="control">
 										<button class="button" type="button">
-											<span class="icon"> <i
-												class="fas fa-angle-double-right"></i>
+											<span class="icon"> <i class="fas fa-angle-double-right"></i>
 											</span>
 										</button>
 									</div>

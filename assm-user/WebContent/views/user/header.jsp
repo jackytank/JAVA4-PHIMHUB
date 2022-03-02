@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +9,11 @@
 <body>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<header>
-		<nav class="navbar is-light is-fixed-top" role="navigation"
-			aria-label="main navigation">
+		<nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<a href="Home" class="navbar-item"> <img
-					src="${pageContext.request.contextPath}/upload/logo.png" alt="">
-				</a> <a role="button" class="navbar-burger" aria-label="menu"
-					aria-expanded="false" data-target="nav-bar" href=""> <span
-					aria-hidden="true"></span> <span aria-hidden="true"></span> <span
-					aria-hidden="true"></span>
+				<a href="Home" class="navbar-item"> <img src="${pageContext.request.contextPath}/upload/logo.png" alt="">
+				</a> <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-bar" href=""> <span
+					aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span>
 				</a>
 			</div>
 			<div class="navbar-menu">

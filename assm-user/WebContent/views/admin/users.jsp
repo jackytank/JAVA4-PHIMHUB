@@ -6,16 +6,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<script src="https://kit.fontawesome.com/e136359f35.js"
-	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/e136359f35.js" crossorigin="anonymous"></script>
 <title>User Management</title>
-<link rel="icon"
-	href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1"
-	type="image/x-icon">
-<script
-	src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
+<link rel="icon" href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1" type="image/x-icon">
+<script src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
 </head>
 
 <body>
@@ -31,12 +26,10 @@
 					<!-- tab header -->
 					<div class="tabs is-boxed">
 						<ul>
-							<li class="is-active" data-target="user-edition"><a> <span
-									class="icon is-small"><i class="fas fa-user-alt"></i></span> <span>USER
-										EDITION</span>
+							<li class="is-active" data-target="user-edition"><a> <span class="icon is-small"><i
+										class="fas fa-user-alt"></i></span> <span>USER EDITION</span>
 							</a></li>
-							<li data-target="user-list"><a> <span
-									class="icon is-small"><i class="fas fa-list"></i></span> <span>USER
+							<li data-target="user-list"><a> <span class="icon is-small"><i class="fas fa-list"></i></span> <span>USER
 										LIST</span>
 							</a></li>
 						</ul>
@@ -51,14 +44,14 @@
 									<div class="field-body">
 										<div class="field">
 											<div class="control">
-												<label for="" class="label">Username</label> <input
-													type="text" class="input" value="${form.userId}" name="userId" readonly="readonly">
+												<label for="" class="label">Username</label> <input type="text" class="input" value="${form.userId}"
+													name="userId" readonly="readonly">
 											</div>
 										</div>
 										<div class="field">
 											<div class="control">
-												<label for="" class="label">Password</label> <input
-													type="password" class="input" value="${form.password}" name="password">
+												<label for="" class="label">Password</label> <input type="password" class="input" value="${form.password}"
+													name="password">
 											</div>
 										</div>
 									</div>
@@ -67,14 +60,14 @@
 									<div class="field-body">
 										<div class="field">
 											<div class="control">
-												<label for="" class="label">Email</label> <input
-													type="email" class="input" value="${form.email}" name="email">
+												<label for="" class="label">Email</label> <input type="email" class="input" value="${form.email}"
+													name="email">
 											</div>
 										</div>
 										<div class="field">
 											<div class="control">
-												<label for="" class="label">Fullname</label> <input
-													type="text" class="input" value="${form.fullname}" name="fullname">
+												<label for="" class="label">Fullname</label> <input type="text" class="input" value="${form.fullname}"
+													name="fullname">
 											</div>
 										</div>
 									</div>
@@ -82,13 +75,11 @@
 								<hr>
 								<div class="field is-grouped is-grouped-right">
 									<div class="control">
-										<button formaction="${url}/update"
-											class="button
+										<button formaction="${url}/update" class="button
 											is-light" type="submit">Update</button>
 									</div>
 									<div class="control">
-										<button formaction="${url}/delete"
-											class="button
+										<button formaction="${url}/delete" class="button
 											is-light" type="submit">Delete</button>
 									</div>
 								</div>
@@ -129,8 +120,7 @@
 								<div class="field is-grouped is-grouped-centered">
 									<div class="control">
 										<button class="button" type="button">
-											<span class="icon"> <i
-												class="fas fa-angle-double-left"></i>
+											<span class="icon"> <i class="fas fa-angle-double-left"></i>
 											</span>
 										</button>
 									</div>
@@ -148,8 +138,7 @@
 									</div>
 									<div class="control">
 										<button class="button" type="button">
-											<span class="icon"> <i
-												class="fas fa-angle-double-right"></i>
+											<span class="icon"> <i class="fas fa-angle-double-right"></i>
 											</span>
 										</button>
 									</div>

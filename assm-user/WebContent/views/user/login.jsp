@@ -6,20 +6,16 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<script src="https://kit.fontawesome.com/e136359f35.js"
-	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/e136359f35.js" crossorigin="anonymous"></script>
 <title>Login</title>
-<link rel="icon"
-	href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1"
-	type="image/x-icon">
+<link rel="icon" href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1" type="image/x-icon">
 </head>
 
 <body>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	<jsp:include page="header.jsp"></jsp:include>
-	
+
 	<main style="display: flex; min-height: 100vh;">
 		<div class="container">
 			<div class="columns is-centered mt-6">
@@ -35,23 +31,22 @@
 						<div class="field">
 							<label for="" class="label">Username</label>
 							<div class="control has-icons-left">
-								<input type="text" class="input" name="userId"> <span
-									class="icon is-small is-left"> <i class="fas fa-user"></i>
+								<input type="text" class="input" name="userId"> <span class="icon is-small is-left"> <i
+									class="fas fa-user"></i>
 								</span>
 							</div>
 						</div>
 						<div class="field">
 							<label for="" class="label">Password</label>
 							<div class="control has-icons-left">
-								<input type="password" class="input" name="password"> <span
-									class="icon is-small is-left"> <i class="fas fa-lock"></i>
+								<input type="password" class="input" name="password"> <span class="icon is-small is-left"> <i
+									class="fas fa-lock"></i>
 								</span>
 							</div>
 						</div>
 						<div class="field is-horizontal">
 							<div class="control">
-								<label class="checkbox"> <input type="checkbox"
-									name="remember"> Remember me
+								<label class="checkbox"> <input type="checkbox" name="remember"> Remember me
 								</label>
 							</div>
 						</div>

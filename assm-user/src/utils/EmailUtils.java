@@ -1,17 +1,11 @@
 package utils;
 
 import java.io.IOException;
-import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-import com.sendgrid.*;
+import com.sendgrid.Method;
+import com.sendgrid.Request;
+import com.sendgrid.Response;
+import com.sendgrid.SendGrid;
 import com.sendgrid.helpers.mail.Mail;
 import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
@@ -45,25 +39,26 @@ public class EmailUtils {
 //		}
 	}
 
-	public static void sendWithSendGridAPI(String fromAddress,String toAddress, String subject, String contents, String api_key) throws IOException {
-		
-		Email from = new Email(fromAddress);
-	    Email to = new Email(toAddress);
-	    Content content = new Content("text/plain", contents);
-	    Mail mail = new Mail(from, subject, to, content);
+	public static void sendWithSendGridAPI(String fromAddress, String toAddress, String subject, String contents,
+			String api_key) throws IOException {
 
-	    SendGrid sg = new SendGrid(api_key);
-	    Request request = new Request();
-	    try {
-	      request.setMethod(Method.POST);
-	      request.setEndpoint("mail/send");
-	      request.setBody(mail.build());
-	      Response response = sg.api(request);
-	      System.out.println(response.getStatusCode());
-	      System.out.println(response.getBody());
-	      System.out.println(response.getHeaders());
-	    } catch (IOException ex) {
-	      throw ex;
-	    }
+		Email from = new Email(fromAddress);
+		Email to = new Email(toAddress);
+		Content content = new Content("text/plain", contents);
+		Mail mail = new Mail(from, subject, to, content);
+
+		SendGrid sg = new SendGrid(api_key);
+		Request request = new Request();
+		try {
+			request.setMethod(Method.POST);
+			request.setEndpoint("mail/send");
+			request.setBody(mail.build());
+			Response response = sg.api(request);
+			System.out.println(response.getStatusCode());
+			System.out.println(response.getBody());
+			System.out.println(response.getHeaders());
+		} catch (IOException ex) {
+			throw ex;
+		}
 	}
 }

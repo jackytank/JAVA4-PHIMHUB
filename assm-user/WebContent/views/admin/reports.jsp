@@ -6,16 +6,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<script src="https://kit.fontawesome.com/e136359f35.js"
-	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://kit.fontawesome.com/e136359f35.js" crossorigin="anonymous"></script>
 <title>Report</title>
-<link rel="icon"
-	href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1"
-	type="image/x-icon">
-<script
-	src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
+<link rel="icon" href="https://tinyzonetv.to/images/group_2/theme_1/logo.png?v=0.1" type="image/x-icon">
+<script src="${pageContext.request.contextPath}/views/admin/js/script.js" defer></script>
 </head>
 
 <body>
@@ -30,16 +25,13 @@
 					<!-- tab header -->
 					<div class="tabs is-boxed">
 						<ul>
-							<li class="is-active" data-target="favorite"><a> <span
-									class="icon is-small"><i class="fas fa-photo-video"></i></span>
-									<span>Favorite</span>
+							<li class="is-active" data-target="favorite"><a> <span class="icon is-small"><i
+										class="fas fa-photo-video"></i></span> <span>Favorite</span>
 							</a></li>
-							<li data-target="favorite-user"><a> <span
-									class="icon is-small"><i class="fas fa-list"></i></span> <span>Favorite
+							<li data-target="favorite-user"><a> <span class="icon is-small"><i class="fas fa-list"></i></span> <span>Favorite
 										Users</span>
 							</a></li>
-							<li data-target="shared-friend"><a> <span
-									class="icon is-small"><i class="fas fa-list"></i></span> <span>Shared
+							<li data-target="shared-friend"><a> <span class="icon is-small"><i class="fas fa-list"></i></span> <span>Shared
 										Friends</span>
 							</a></li>
 						</ul>
@@ -85,9 +77,7 @@
 												<div class="select is-fullwidth">
 													<select name="videoUserId">
 														<c:forEach var="item" items="${videoList}">
-															<option value="${item.videoId}"
-																${item.videoId == videoUserId? "selected":""}>
-																${item.title}</option>
+															<option value="${item.videoId}" ${item.videoId == videoUserId? "selected":""}>${item.title}</option>
 														</c:forEach>
 													</select>
 												</div>
@@ -133,9 +123,7 @@
 												<div class="select is-fullwidth">
 													<select name="videoShareId">
 														<c:forEach var="item" items="${videoShareList}">
-															<option value="${item.videoId}"
-																${item.videoId == videoShareId? "selected":""}>
-																${item.title}</option>
+															<option value="${item.videoId}" ${item.videoId == videoShareId? "selected":""}>${item.title}</option>
 														</c:forEach>
 													</select>
 												</div>

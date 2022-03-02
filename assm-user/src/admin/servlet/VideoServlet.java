@@ -14,7 +14,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import dao.VideoDAO;
 import model.Video;
 import utils.SessionUtils;
-import utils.UploadUtils;
 
 @WebServlet({ "/video/index", "/video/edit/*", "/video/create", "/video/update", "/video/delete", "/video/reset",
 		"/video" })
