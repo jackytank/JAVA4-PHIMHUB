@@ -2,6 +2,6 @@ package test;
 
 import org.testng.annotations.Test;
 
-public class TestVideo {
+public class TestUserDAO {
 
 }

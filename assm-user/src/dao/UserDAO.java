@@ -7,7 +7,7 @@ import javax.persistence.TypedQuery;
 import model.User;
 import utils.JpaUtils;
 
-public class UserDAO extends EntityDAO<User> {
+public class UserDAO extends EntityDAO<User> { 
 	public UserDAO() {
 		super(User.class);
 	}
