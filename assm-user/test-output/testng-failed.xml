@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestFavoriteDAO">
+      <class name="test.TestUserDAO">
         <methods>
           <include name="testUpdate2"/>
-          <include name="testUpdate1"/>
         </methods>
-      </class> <!-- test.TestFavoriteDAO -->
+      </class> <!-- test.TestUserDAO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

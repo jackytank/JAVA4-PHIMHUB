@@ -90,7 +90,6 @@ public class TestFavoriteDAO {
 	public void testUpdate1() {
 		FavoriteDAO dao = new FavoriteDAO();
 		Favorite favorite = new Favorite();
-
 		favorite.setFavoriteId(99);
 		favorite.setUser(new User());
 		favorite.setVideo(new Video());
