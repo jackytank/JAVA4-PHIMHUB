@@ -2,18 +2,19 @@ package user.servlet;
 
 import java.io.IOException;
 import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.ShareDAO;
-import model.Share;
-import model.User;
-import model.Video;
-import utils.EmailUtils;
-import utils.SessionUtils;
+import main.dao.ShareDAO;
+import main.model.Share;
+import main.model.User;
+import main.model.Video;
+import main.utils.EmailUtils;
+import main.utils.SessionUtils;
 
 @WebServlet("/ShareVideo")
 public class ShareVideoServlet extends HttpServlet {

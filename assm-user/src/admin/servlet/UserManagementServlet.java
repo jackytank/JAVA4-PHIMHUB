@@ -15,7 +15,7 @@ import dao.UserDAO;
 import model.User;
 import utils.SessionUtils;
 
-@WebServlet({"/user/index", "/user/edit/*", "/user/create", "/user/update", "/user/delete", "/user/reset","/user" })
+@WebServlet({ "/user/index", "/user/edit/*", "/user/create", "/user/update", "/user/delete", "/user/reset", "/user" })
 public class UserManagementServlet extends HttpServlet {
 	UserDAO userDAO = new UserDAO();
 

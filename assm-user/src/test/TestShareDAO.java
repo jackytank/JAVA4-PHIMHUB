@@ -45,7 +45,7 @@ public class TestShareDAO {
 			dao.insert(sh);
 		}
 		
-		//test khi bỏ trống video id
+		//test khi b�? trống video id
 		@Test(expectedExceptions = PersistenceException.class)
 		public void testInsert3() {
 			Share sh = new Share();
@@ -75,7 +75,7 @@ public class TestShareDAO {
 			dao.update(sh);
 		}
 		
-		//test khi bỏ trống video id
+		//test khi b�? trống video id
 		@Test(expectedExceptions = PersistenceException.class)
 		public void testUpdate2() {
 			Share sh = new Share();
@@ -89,7 +89,7 @@ public class TestShareDAO {
 			dao.update(sh);
 		}
 		
-		//test khi bỏ trống email
+		//test khi b�? trống email
 		@Test(expectedExceptions = PersistenceException.class)
 		public void testUpdate3() {
 			Share sh = new Share();
@@ -101,7 +101,7 @@ public class TestShareDAO {
 			dao.update(sh);
 		}
 		
-		//test khi bỏ trống user id
+		//test khi b�? trống user id
 		@Test(expectedExceptions = IllegalArgumentException.class)
 		public void testDelete1() {
 			ShareDAO dao = new ShareDAO();
