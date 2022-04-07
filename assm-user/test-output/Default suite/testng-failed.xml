@@ -7,7 +7,7 @@
         <methods>
           <include name="terminateBrowser"/>
           <include name="launchBrowser"/>
-          <include name="testRegistration"/>
+          <include name="testRegistration" invocation-numbers="1 2 3"/>
         </methods>
       </class> <!-- test.TestRegistrationServlet -->
     </classes>

@@ -76,11 +76,11 @@
 								<div class="field is-grouped is-grouped-right">
 									<div class="control">
 										<button formaction="${url}/update" class="button
-											is-light" type="submit">Update</button>
+											is-light" type="submit" name="update" >Update</button>
 									</div>
 									<div class="control">
 										<button formaction="${url}/delete" class="button
-											is-light" type="submit">Delete</button>
+											is-light" type="submit" name="delete" >Delete</button>
 									</div>
 								</div>
 								<div class="field">
