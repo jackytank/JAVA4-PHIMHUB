@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-07T13:03:02 ICT" name="Default suite" finished-at="2022-04-07T13:03:32 ICT" duration-ms="29957">
+  <suite started-at="2022-04-07T14:47:08 ICT" name="Default suite" finished-at="2022-04-07T14:47:32 ICT" duration-ms="23625">
     <groups>
     </groups>
-    <test started-at="2022-04-07T13:03:02 ICT" name="Default test" finished-at="2022-04-07T13:03:32 ICT" duration-ms="29957">
-      <class name="test.TestLoginServlet">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:04 ICT" name="launchBrowser" finished-at="2022-04-07T13:03:10 ICT" duration-ms="6232" status="PASS">
+    <test started-at="2022-04-07T14:47:08 ICT" name="Default test" finished-at="2022-04-07T14:47:32 ICT" duration-ms="23625">
+      <class name="test.TestRegistrationServlet">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:10 ICT" name="launchBrowser" finished-at="2022-04-07T14:47:15 ICT" duration-ms="5003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="testLogin1(java.lang.String,java.lang.String)[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:10 ICT" name="testLogin1" data-provider="loginDataProvider" finished-at="2022-04-07T13:03:20 ICT" duration-ms="9999" status="PASS">
+        <test-method signature="testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:15 ICT" name="testRegistration" data-provider="RegistrationDataProvider" finished-at="2022-04-07T14:47:18 ICT" duration-ms="3418" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[batman]]>
+                <![CDATA[thanos]]>
               </value>
             </param>
             <param index="1">
@@ -23,23 +23,33 @@
                 <![CDATA[1221]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nguyen Thanos]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Thanos@gmail.com]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin1 -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:20 ICT" name="terminateBrowser" finished-at="2022-04-07T13:03:20 ICT" duration-ms="156" status="PASS">
+        </test-method> <!-- testRegistration -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:18 ICT" name="terminateBrowser" finished-at="2022-04-07T14:47:18 ICT" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:20 ICT" name="launchBrowser" finished-at="2022-04-07T13:03:22 ICT" duration-ms="1904" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:18 ICT" name="launchBrowser" finished-at="2022-04-07T14:47:20 ICT" duration-ms="2032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="testLogin1(java.lang.String,java.lang.String)[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:22 ICT" name="testLogin1" data-provider="loginDataProvider" finished-at="2022-04-07T13:03:23 ICT" duration-ms="1630" status="PASS">
+        <test-method signature="testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:20 ICT" name="testRegistration" data-provider="RegistrationDataProvider" finished-at="2022-04-07T14:47:23 ICT" duration-ms="2630" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[flash]]>
+                <![CDATA[captainemerica]]>
               </value>
             </param>
             <param index="1">
@@ -47,23 +57,33 @@
                 <![CDATA[1221]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tran Captain]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Captain@gmail.com]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin1 -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:23 ICT" name="terminateBrowser" finished-at="2022-04-07T13:03:24 ICT" duration-ms="139" status="PASS">
+        </test-method> <!-- testRegistration -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:23 ICT" name="terminateBrowser" finished-at="2022-04-07T14:47:23 ICT" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:24 ICT" name="launchBrowser" finished-at="2022-04-07T13:03:25 ICT" duration-ms="1878" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:23 ICT" name="launchBrowser" finished-at="2022-04-07T14:47:25 ICT" duration-ms="1881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="testLogin1(java.lang.String,java.lang.String)[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:25 ICT" name="testLogin1" data-provider="loginDataProvider" finished-at="2022-04-07T13:03:28 ICT" duration-ms="2304" status="PASS">
+        <test-method signature="testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:25 ICT" name="testRegistration" data-provider="RegistrationDataProvider" finished-at="2022-04-07T14:47:28 ICT" duration-ms="2557" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[aquaman]]>
+                <![CDATA[blackwidow]]>
               </value>
             </param>
             <param index="1">
@@ -71,23 +91,33 @@
                 <![CDATA[1221]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nguyen Black]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Black@gmail.com]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin1 -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:28 ICT" name="terminateBrowser" finished-at="2022-04-07T13:03:28 ICT" duration-ms="113" status="PASS">
+        </test-method> <!-- testRegistration -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:28 ICT" name="terminateBrowser" finished-at="2022-04-07T14:47:28 ICT" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:28 ICT" name="launchBrowser" finished-at="2022-04-07T13:03:30 ICT" duration-ms="1829" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:28 ICT" name="launchBrowser" finished-at="2022-04-07T14:47:29 ICT" duration-ms="1895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="testLogin1(java.lang.String,java.lang.String)[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:30 ICT" name="testLogin1" data-provider="loginDataProvider" finished-at="2022-04-07T13:03:32 ICT" duration-ms="2346" status="PASS">
+        <test-method signature="testRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:29 ICT" name="testRegistration" data-provider="RegistrationDataProvider" finished-at="2022-04-07T14:47:32 ICT" duration-ms="2397" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[wonderwoman]]>
+                <![CDATA[scarlet]]>
               </value>
             </param>
             <param index="1">
@@ -95,15 +125,25 @@
                 <![CDATA[1221]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tran Scarlet]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Scarlet@gmail.com]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin1 -->
-        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestLoginServlet@298a5e20]" started-at="2022-04-07T13:03:32 ICT" name="terminateBrowser" finished-at="2022-04-07T13:03:32 ICT" duration-ms="171" status="PASS">
+        </test-method> <!-- testRegistration -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:test.TestRegistrationServlet@298a5e20]" started-at="2022-04-07T14:47:32 ICT" name="terminateBrowser" finished-at="2022-04-07T14:47:32 ICT" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateBrowser -->
-      </class> <!-- test.TestLoginServlet -->
+      </class> <!-- test.TestRegistrationServlet -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

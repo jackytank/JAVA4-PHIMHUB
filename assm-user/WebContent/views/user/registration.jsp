@@ -55,7 +55,7 @@
 						<hr>
 						<div class="field">
 							<div class="control">
-								<button class="button is-fullwidth is-primary" type="submit">Sign Up</button>
+								<button class="button is-fullwidth is-primary" type="submit" name="signupBtn">Sign Up</button>
 							</div>
 						</div>
 					</form>

@@ -45,7 +45,7 @@
 										<div class="field">
 											<div class="control">
 												<label for="" class="label">Username</label> <input type="text" class="input" value="${form.userId}"
-													name="userId" readonly="readonly">
+													name="userId">
 											</div>
 										</div>
 										<div class="field">

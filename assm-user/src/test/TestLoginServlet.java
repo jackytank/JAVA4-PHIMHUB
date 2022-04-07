@@ -58,7 +58,7 @@ public class TestLoginServlet {
 	@DataProvider
 	public Object[][] loginDataProvider() throws Exception {
 		String excelFilePath = Paths.get("src", "resources", "LoginData.xlsx").toFile().getAbsolutePath(); 
-		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "Sheet1");
+		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "Sheet1", 2);
 		return arr;
 	}
 

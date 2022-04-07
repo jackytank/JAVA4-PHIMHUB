@@ -17,7 +17,7 @@ public class ExcelUtil {
 	private static XSSFCell Cell;
 	private static XSSFRow Row;
 
-	public static Object[][] getTableArray(String FilePath, String SheetName) throws Exception {
+	public static Object[][] getTableArray(String FilePath, String SheetName, int colMax) throws Exception {
 		Object[][] tabArray = null;
 		try {
 			FileInputStream ExcelFile = new FileInputStream(FilePath);
@@ -29,7 +29,7 @@ public class ExcelUtil {
 			int ci, cj;
 			int totalRows = ExcelWSheet.getLastRowNum();
 			// you can write a function as well to get Column count
-			int totalCols = 2;
+			int totalCols = colMax;
 			tabArray = new String[totalRows][totalCols];
 			ci = 0;
 			for (int i = startRow; i <= totalRows; i++, ci++) {
