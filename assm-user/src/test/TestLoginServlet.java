@@ -32,6 +32,7 @@ public class TestLoginServlet {
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(url);
+		ExcelUtil.exportTestResultExcel(Paths.get("src", "resources", "LoginData.xlsx").toFile());
 	}
 
 	@Test(dataProvider = "loginDataProvider")

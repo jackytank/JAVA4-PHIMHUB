@@ -1,8 +1,11 @@
 package utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -63,6 +66,22 @@ public class ExcelUtil {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			throw (e);
+		}
+	}
+
+	public static void exportTestResultExcel(File file) throws Exception {
+		try {
+			FileInputStream fis = new FileInputStream(file);
+
+			XSSFWorkbook wb = new XSSFWorkbook(fis);
+			if(wb.getSheetIndex("Test Result") == -1) {
+				XSSFSheet sheet = wb.createSheet("Test Result");
+			}
+			FileOutputStream fos = new FileOutputStream(file);
+			wb.write(fos);
+			wb.close();
+		} catch (Exception e) {
+			throw e;
 		}
 	}
 }
