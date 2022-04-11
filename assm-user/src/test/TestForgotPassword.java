@@ -48,7 +48,7 @@ public class TestForgotPassword {
 	@DataProvider
 	public Object[][] ForgotPasswordDataProvider() throws Exception {
 		String excelFilePath = Paths.get("src", "resources", "TestForgotPassword.xlsx").toFile().getAbsolutePath(); 
-		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "Sheet1", 4);
+		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "Sheet1", 2);
 		return arr;
 	}
 
