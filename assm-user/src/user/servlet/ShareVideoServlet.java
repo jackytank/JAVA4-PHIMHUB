@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import main.dao.ShareDAO;
-import main.model.Share;
-import main.model.User;
-import main.model.Video;
-import main.utils.EmailUtils;
-import main.utils.SessionUtils;
+import dao.ShareDAO;
+import model.Share;
+import model.User;
+import model.Video;
+import utils.EmailUtils;
+import utils.SessionUtils;
 
 @WebServlet("/ShareVideo")
 public class ShareVideoServlet extends HttpServlet {

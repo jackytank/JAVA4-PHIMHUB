@@ -50,7 +50,7 @@
 						<hr>
 						<div class="field">
 							<div class="control">
-								<button class="button is-primary is-fullwidth" type="submit">Update</button>
+								<button name="updateBtn" class="button is-primary is-fullwidth" type="submit">Update</button>
 							</div>
 						</div>
 						<div class="field">
