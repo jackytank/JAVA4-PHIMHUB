@@ -37,7 +37,7 @@
 						<hr>
 						<div class="field">
 							<div class="control">
-								<button class="button is-fullwidth is-primary" type="submit">Retrieve</button>
+								<button class="button is-fullwidth is-primary" type="submit" name="btnRetrieve">Retrieve</button>
 							</div>
 						</div>
 						<div class="field">
