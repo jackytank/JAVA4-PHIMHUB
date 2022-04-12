@@ -59,6 +59,9 @@ public class ExcelUtil {
 			if (dataType == CellType.NUMERIC) {
 				Double CellData = Cell.getNumericCellValue();
 				return String.format("%.0f", CellData);
+			} else if (dataType == CellType.FORMULA) {
+				String CellData = Cell.getCellFormula();
+				return CellData;
 			} else {
 				String CellData = Cell.getStringCellValue();
 				return CellData;
@@ -74,7 +77,7 @@ public class ExcelUtil {
 			FileInputStream fis = new FileInputStream(file);
 
 			XSSFWorkbook wb = new XSSFWorkbook(fis);
-			if(wb.getSheetIndex("Test Result") == -1) {
+			if (wb.getSheetIndex("Test Result") == -1) {
 				XSSFSheet sheet = wb.createSheet("Test Result");
 			}
 			FileOutputStream fos = new FileOutputStream(file);

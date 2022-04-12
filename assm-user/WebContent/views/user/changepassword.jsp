@@ -43,7 +43,7 @@
 						<div class="field">
 							<label for="" class="label">New password</label>
 							<div class="control has-icons-left">
-								<input type="password" class="input" name="password"> <span class="icon is-small is-left"> <i
+								<input type="password" class="input" name="newPass"> <span class="icon is-small is-left"> <i
 									class="fas fa-lock"></i>
 								</span>
 							</div>
@@ -51,7 +51,7 @@
 						<div class="field">
 							<label for="" class="label">Confirm New Password</label>
 							<div class="control has-icons-left">
-								<input type="password" class="input" name="confirmPassword"> <span class="icon is-small is-left">
+								<input type="password" class="input" name="retype"> <span class="icon is-small is-left">
 									<i class="fas fa-check"></i>
 								</span>
 							</div>
@@ -59,7 +59,7 @@
 						<hr>
 						<div class="field">
 							<div class="control">
-								<button class="button is-fullwidth is-primary" type="submit">Change Password</button>
+								<button class="button is-fullwidth is-primary" type="submit" name="changeBtn">Change Password</button>
 							</div>
 						</div>
 						<div class="field">
