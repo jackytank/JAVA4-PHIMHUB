@@ -1,12 +1,19 @@
 package test;
 
+import static org.testng.Assert.assertEquals;
+
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -17,6 +24,28 @@ import utils.ExcelUtil;
 public class TestChangePassword {
 	String url = "http://localhost:8080/assm-user/ChangePassword";
 	public ChromeDriver driver;
+	Map<String, Object[]> res;
+	int index;
+
+	@BeforeClass
+	public void initiateStep() {
+		res = new LinkedHashMap<String, Object[]>();
+		index = 0;
+		res.put("" + index, new Object[] { "Test ID", "Action", "Input data", "Expected", "Actual", "Result" });
+	}
+
+	@AfterClass
+	public void finalizeStep() {
+		res.entrySet().forEach(entry -> {
+			System.out.println(entry.getKey() + " : " + Arrays.toString(entry.getValue()));
+		});
+		try {
+			ExcelUtil.exportTestResultExcel(Paths.get("src", "resources", "ChangePasswordData.xlsx").toFile(), res);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
 
 	@SuppressWarnings("deprecation")
 	@BeforeMethod
@@ -52,6 +81,16 @@ public class TestChangePassword {
 			driver.findElement(By.name("retype")).sendKeys(retype);
 			System.out.println(retype);
 			driver.findElement(By.name("changeBtn")).click();
+			// check change password result by checking page title
+			String expectedTitle = "Change Password";
+			String actualTitle = driver.getTitle();
+			assertEquals(expectedTitle, actualTitle);
+			boolean result = expectedTitle.equals(actualTitle);
+			index++;
+			res.put("" + index,
+					new Object[] { index, "Test Change password",
+							String.format("%s, %s, %s, %s", username, password, newPass, retype), expectedTitle,
+							actualTitle, result ? "Passed" : "Fail" });
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

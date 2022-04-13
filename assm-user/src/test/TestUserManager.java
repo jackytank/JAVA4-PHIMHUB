@@ -3,13 +3,18 @@ package test;
 import static org.testng.Assert.assertEquals;
 
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -20,7 +25,29 @@ import utils.ExcelUtil;
 public class TestUserManager {
 	String url = "http://localhost:8080/assm-user/user/index";
 	public WebDriver driver;
-	
+	Map<String, Object[]> res;
+	int index;
+
+	@BeforeClass
+	public void initiateStep() {
+		res = new LinkedHashMap<String, Object[]>();
+		index = 0;
+		res.put("" + index, new Object[] { "Test ID", "Action", "Input data", "Expected", "Actual", "Result" });
+	}
+
+	@AfterClass
+	public void finalizeStep() {
+		res.entrySet().forEach(entry -> {
+			System.out.println(entry.getKey() + " : " + Arrays.toString(entry.getValue()));
+		});
+		try {
+			ExcelUtil.exportTestResultExcel(Paths.get("src", "resources", "UserManagerData.xlsx").toFile(), res);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
+
 	@SuppressWarnings("deprecation")
 	@BeforeMethod
 	public void launchBrowser() throws Exception {
@@ -31,9 +58,8 @@ public class TestUserManager {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(url);
 	}
-	
-	
-	@Test(dataProvider = "UpdateDataProvider")
+
+	@Test(dataProvider = "UpdateDataProvider", priority = 1)
 	public void testRegistration(String username, String password, String fullname, String email) throws Exception {
 		try {
 			Thread.sleep(500);
@@ -53,19 +79,25 @@ public class TestUserManager {
 			String expectedTitle = "User Management";
 			String actualTitle = driver.getTitle();
 			assertEquals(expectedTitle, actualTitle);
+			boolean result = expectedTitle.equals(actualTitle);
+			index++;
+			res.put("" + index,
+					new Object[] { index, "Test Change password",
+							String.format("%s, %s, %s, %s", username, password, fullname, email), expectedTitle,
+							actualTitle, result ? "Passed" : "Fail" });
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@DataProvider
 	public Object[][] UpdateDataProvider() throws Exception {
-		String excelFilePath = Paths.get("src", "resources", "TestUserManager.xlsx").toFile().getAbsolutePath(); 
-		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "LOGIN_DATA", 4);
+		String excelFilePath = Paths.get("src", "resources", "UserManagerData.xlsx").toFile().getAbsolutePath();
+		Object[][] arr = ExcelUtil.getTableArray(excelFilePath, "LOGIN_DATA", 4);
 		return arr;
 	}
-	
-	@Test(dataProvider = "DeleteDataProvider")
+
+	@Test(dataProvider = "DeleteDataProvider", priority = 2)
 	public void testdelete(String username, String password, String fullname, String email) throws Exception {
 		try {
 			Thread.sleep(500);
@@ -85,18 +117,25 @@ public class TestUserManager {
 			String expectedTitle = "User Management";
 			String actualTitle = driver.getTitle();
 			assertEquals(expectedTitle, actualTitle);
+			boolean result = expectedTitle.equals(actualTitle);
+			index++;
+			res.put("" + index,
+					new Object[] { index, "Test Change password",
+							String.format("%s, %s, %s, %s", username, password, fullname, email), expectedTitle,
+							actualTitle, result ? "Passed" : "Fail" });
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@DataProvider
 	public Object[][] DeleteDataProvider() throws Exception {
-		String excelFilePath = Paths.get("src", "resources", "TestUserManager.xlsx").toFile().getAbsolutePath(); 
-		Object[][] arr  = ExcelUtil.getTableArray(excelFilePath, "RESULT", 4);
+		String excelFilePath = Paths.get("src", "resources", "UserManagerData.xlsx").toFile().getAbsolutePath();
+		Object[][] arr = ExcelUtil.getTableArray(excelFilePath, "RESULT", 4);
 		return arr;
-	
+
 	}
+
 	@AfterMethod
 	public void terminateBrowser() {
 		driver.close();

@@ -5,7 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Paths;
+import java.util.Date;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -72,17 +73,38 @@ public class ExcelUtil {
 		}
 	}
 
-	public static void exportTestResultExcel(File file) throws Exception {
+	public static void exportTestResultExcel(File file, Map<String, Object[]> map) throws Exception {
 		try {
 			FileInputStream fis = new FileInputStream(file);
-
 			XSSFWorkbook wb = new XSSFWorkbook(fis);
-			if (wb.getSheetIndex("Test Result") == -1) {
-				XSSFSheet sheet = wb.createSheet("Test Result");
+			XSSFSheet sheet = wb.getSheetIndex("Test Result") == -1 ? wb.createSheet("Test Result")
+					: wb.getSheet("Test Result");
+			int rowIndex = 0, cellIndex;
+			// create row and cell and set value to cell
+			for (Map.Entry<String, Object[]> entry : map.entrySet()) {
+				XSSFRow row = sheet.createRow(rowIndex++);
+				cellIndex = 0;
+				for (Object obj : entry.getValue()) {
+					XSSFCell cell = row.createCell(cellIndex++);
+					if (obj instanceof Date) {
+						cell.setCellValue((Date) obj);
+					} else if (obj instanceof Boolean) {
+						cell.setCellValue((Boolean) obj);
+					} else if (obj instanceof String) {
+						cell.setCellValue((String) obj);
+					} else if (obj instanceof Double) {
+						cell.setCellValue((Double) obj);
+					} else if (obj instanceof Integer) {
+						cell.setCellValue((Integer) obj);
+					}
+				}
 			}
+			// save to file
 			FileOutputStream fos = new FileOutputStream(file);
 			wb.write(fos);
+			fos.close();
 			wb.close();
+			System.out.println("Export test result to excel success!!");
 		} catch (Exception e) {
 			throw e;
 		}
