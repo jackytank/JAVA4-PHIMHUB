@@ -9,6 +9,9 @@ Tools used to build
 - SQL Server 2019
 - Tomcat 9.0.58
 
+Testing:
+- JUnit & TestNG
+
 ** Demo user **
 
 ![image](https://user-images.githubusercontent.com/52403567/159279597-256f7cf1-a89e-4892-ac52-1195b9aa1ea8.png)
