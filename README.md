@@ -2,15 +2,15 @@
 ###### This web app was built using Sevlet/JSP, Hibernate
 
 Tools used to build
-- Oracle JDK 11.0.13
-- Hibernate 5.6.5
-- Twilio SendGrid
-- Eclipse 2021-12-R
-- SQL Server 2019
-- Tomcat 9.0.58
-- Bulma
+  - Oracle JDK 11.0.13
+  - Hibernate 5.6.5
+  - Twilio SendGrid
+  - Eclipse 2021-12-R
+  - SQL Server 2019
+  - Tomcat 9.0.58
+  - Bulma
 Testing:
-- JUnit & TestNG
+  - JUnit & TestNG
 
 ** Demo user **
 
