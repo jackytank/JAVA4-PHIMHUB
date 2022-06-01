@@ -1,7 +1,7 @@
 ## YOUTUBE-LIKE WEB APPLICATION
 ###### This web app was built using Sevlet/JSP, Hibernate
 
-Tools used to build
+- Tools used to build
   - Oracle JDK 11.0.13
   - Hibernate 5.6.5
   - Twilio SendGrid
@@ -9,7 +9,7 @@ Tools used to build
   - SQL Server 2019
   - Tomcat 9.0.58
   - Bulma
-Testing:
+- Testing:
   - JUnit & TestNG
 
 ** Demo user **
