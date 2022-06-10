@@ -1,6 +1,12 @@
 ## YOUTUBE-LIKE WEB APPLICATION
 ###### This web app was built using Sevlet/JSP, Hibernate
 
+* Simple youtube-like video-sharing website developed using Bulma,
+Servlet/JSP, SQLServer. Users can watch videos, like videos, log in, and
+signup. Admin has a dedicated dashboard web app to monitor users and
+videos.
+
+
 - Tools used to build
   - Oracle JDK 11.0.13
   - Hibernate 5.6.5
